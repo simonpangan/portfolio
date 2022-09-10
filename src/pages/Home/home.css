@@ -1,0 +1,36 @@
+a.feature-projects-links {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+a.feature-projects-links:hover {
+  text-decoration: underline;
+}
+
+.row.home-row {
+  max-width: 350px;
+}
+
+@media (min-width: 576px) {
+  .row.home-row {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .row.home-row {
+    max-width: 1000px;
+  }
+}
+
+.skills-icon-holder {
+  background: var(--bs-primary);
+  width: 80px;
+  height: 80px;
+  padding-top: 1.25rem;
+  top: -40px;
+  left: 40%;
+  margin-left: -40px;
+}
+

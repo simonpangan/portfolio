@@ -20,6 +20,7 @@
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/images";
 @import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/card";
 
 
 //components
@@ -44,7 +45,6 @@
 // Custom styles
 
 @import './sketchy/styles/base';
+@import './components.css';
 
-
-// @import "~bootstrap/scss/bootstrap";
 

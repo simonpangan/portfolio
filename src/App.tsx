@@ -1,30 +1,34 @@
 import React from 'react';
 
-import { Routes, Route } from "react-router-dom";
+import './assets/css/styles.scss';
 
 import Navbar from "./fragments/Navbar";
-
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-
-import './assets/css/styles.scss';
 import Footer from "./fragments/Footer";
 
+import {Routes, Route} from "react-router-dom";
+
+import routes from "./variables/routes";
+
 function App() {
-  return (
-    <div className="App">
-        <Navbar />
+    const routeComponents = routes.map(
+        ({url, Component}, key) => {
+            return <Route path={url} element={<Component />} key={key} />
+        }
+    );
 
-        <div className="container-fluid px-0">
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="about" element={<About />} />
-            </Routes>
+    return (
+        <div className="App">
+            <Navbar/>
+
+            <div className="container-fluid px-0">
+                <Routes>
+                    {routeComponents}
+                </Routes>
+            </div>
+
+            <Footer/>
         </div>
-
-        <Footer />
-    </div>
-  );
+    );
 }
 
 export default App;
