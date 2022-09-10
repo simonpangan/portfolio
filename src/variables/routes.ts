@@ -1,26 +1,21 @@
 import Route from '../interfaces/RouteInterface';
 
+import Home from "../pages/Home/Home";
+import About from "../pages/About/About";
+
 const routes: Array<Route> = [
 	{
 		id: 1,
-		name: 'about',
-		url: '/123',
+		name: 'Home',
+		url: '/',
+		Component: Home,
 	},
 	{
 		id: 2,
-		name: 'project',
-		url: '/123',
+		name: 'About',
+		url: '/about',
+		Component: About,
 	},
-	{
-		id: 3,
-		name: 'blog',
-		url: '/123',
-	},
-	{
-		id: 4,
-		name: 'contact',
-		url: '/123',
-	}
 ];
 
 export default routes;
