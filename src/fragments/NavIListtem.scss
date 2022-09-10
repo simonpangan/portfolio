@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+	.navbar-item-collapse {
+		text-align: center;
+	}
+	
+	.navbar-item-collapse:not(:last-child) {
+		border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+		border-color: rgba(var(--bs-light-rgb), var(--bs-border-opacity)) !important;
+		--bs-border-opacity: 0.1;
+	}
+}
