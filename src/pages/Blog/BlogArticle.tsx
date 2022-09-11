@@ -14,7 +14,7 @@ function BlogArticle({children}: Props) {
     return (
         <article className="mx-auto blog-article mt-3">
             <div className="card card-default">
-                <img className="w-100 d-block blog-img" src={img}/>
+                <img className="w-100 d-block blog-img" src={img} alt={title}/>
                 <div className="card-body">
                     <a className="text-deco-none display-5 blog-title" href="#">
                         {title}
@@ -27,6 +27,7 @@ function BlogArticle({children}: Props) {
                             <img
                                 className="rounded-circle img-fluid icon"
                                 src={img}
+                                alt="Simon Pangan"
                             />
                         </div>
                         <div className="pb-0 mb-0 ms-2 align-self-center">
