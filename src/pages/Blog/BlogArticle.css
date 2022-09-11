@@ -1,0 +1,21 @@
+.blog-article {
+  max-width: 325px;
+}
+
+@media (min-width: 576px) {
+  .blog-article {
+    max-width: 450px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-article {
+    max-width: 550px!important;
+  }
+}
+
+@media (min-width: 992px) {
+  .blog-article {
+    max-width: 700px!important;
+  }
+}
