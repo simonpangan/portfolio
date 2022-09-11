@@ -7,10 +7,11 @@ type Props = {
 export default (
 	{items, resourceName, itemComponent: ItemComponent}  : Props
 ) : JSX.Element => {
+
 	return (
 		<>
-			{items.map((item, i) => {
-				return <ItemComponent key={item.id} {...{ [resourceName]: item}} />
+			{items.map((item) => {
+				return <ItemComponent key={item.id} {...(resourceName != null && {[resourceName]:item})} />
 			})}
 		</>
 	);
