@@ -13,7 +13,7 @@ function BlogHeader() {
                 </p>
                 <ul className="list-inline">
                     <li className="list-inline-item">
-                        <a className="text-white" href="#">
+                        <a className="text-white" href="https://twitter.com/simonpangan" target="_blank">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="1em"
@@ -28,7 +28,7 @@ function BlogHeader() {
                         </a>
                     </li>
                     <li className="list-inline-item">
-                        <a className="text-white" href="#">
+                        <a className="text-white" href="https://www.instagram.com/simonpangan/" target="_blank">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="1em"
@@ -43,7 +43,7 @@ function BlogHeader() {
                         </a>
                     </li>
                     <li className="list-inline-item">
-                        <a className="text-white" href="#">
+                        <a className="text-white" href="https://www.linkedin.com/in/simonpangan/" target="_blank">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="1em"
