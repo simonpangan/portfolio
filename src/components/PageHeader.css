@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+  .page-header {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header {
+    width: 1100px !important;
+  }
+}
+@media (min-width: 992px) {
+  .page-header {
+    width: 900px;
+  }
+}
+@media (min-width: 1400px) {
+  .page-header {
+    width: 1200px !important;
+  }
+}
