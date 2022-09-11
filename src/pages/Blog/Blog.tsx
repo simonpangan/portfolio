@@ -4,18 +4,19 @@ import BlogArticle from "./BlogArticle";
 import BlogHeader from "./BlogHeader";
 
 import {articles} from "./Article";
+import RegularList from "../../patterns/RegularList";
 
 function Blog() {
-
-    let blogArticles = articles.map(article => {
-        return <BlogArticle>{article}</BlogArticle>;
-    });
 
     return (
         <>
             <BlogHeader />
             <div className="pt-3">
-                {blogArticles}
+                <RegularList
+                    items={articles}
+                    resourceName="children" // pass articles as named children rather than props
+                    itemComponent={BlogArticle}
+                />
             </div>
         </>
     );
