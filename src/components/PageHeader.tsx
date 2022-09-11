@@ -1,7 +1,7 @@
 import './PageHeader.css';
 
 type Props = {
-  children: JSX.Element[],
+  children: JSX.Element[] | JSX.Element,
 };
 
 function PageHeader({children} : Props) {
