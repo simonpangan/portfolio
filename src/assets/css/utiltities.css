@@ -1,0 +1,18 @@
+a.hover\:text-deco-underline:hover {
+  text-decoration: underline;
+}
+
+a.text-deco-none {
+  text-decoration: none;
+}
+
+.icon-md {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.icon {
+  max-width: 60px;
+  max-height: 60px;
+}
+
