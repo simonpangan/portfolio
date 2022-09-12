@@ -1,17 +1,20 @@
 import './ContactForm.scss';
 import Input from "../../components/UI/Form/Input";
-import { FormContext } from '../../Context/Form';
+import Form, { FormContext } from "../../context/Form";
+import React, {useContext} from "react";
 
 function ContactForm() {
-    const handleFormChange = (event : React.ChangeEvent<HTMLInputElement>) => {
-        alert('hello');
+
+    const submit = (event: React.FormEvent<HTMLFormElement>, form : {}) => {
+        event.preventDefault();
+        console.log(form);
     };
 
     return (
         <section className="shadow mt-4">
             <div className="p-2">
-                <form className="mx-auto py-4 px-3">
-                    <h3 className="fs-1 text-center">Get In Touch</h3>
+                <h3 className="fs-1 text-center">Get In Touch</h3>
+                <Form submit={submit} className='mx-auto py-4 px-3'>
                     <div className="row">
                         <div className="col-12 col-md-6">
                             <Input name='name' type='text' label='Name' />
@@ -25,7 +28,7 @@ function ContactForm() {
                     <div className="text-md-end d-grid d-md-block">
                         <button className="btn btn-primary" type="submit">Submit</button>
                     </div>
-                </form>
+                </Form>
             </div>
         </section>
     );

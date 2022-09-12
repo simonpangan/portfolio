@@ -8,11 +8,13 @@ function ContactIntro() {
                 <img className="rounded-circle img-fluid icon-md mx-auto" src={Me} alt="Simon Pangan" />
             </div>
             <div className="shadow contact-intro px-3 pt-4 pb-2 position-relative">
-                <p className="contact-intro-message mx-auto">I'm currently taking on freelance work. If you are
-                    interested in hiring me for your project please use the form below to get in touch. Want to know how
-                    I work and what I can offer? Check out my <a className="link-info text-deco-none" href="#">project
-                        case studies</a>&nbsp;and <a className="link-info text-deco-none" href="#">resume</a>.</p>
-                <h6 className="text-center">You can also find me on the following channels <br /></h6>
+                <p className="contact-intro-message mx-auto">
+                    I'm currently taking on freelance work.
+                    If you are interested in hiring me for your project please use the form below to get in touch.
+                    Want to know how I work and what I can offer? Check out my
+                    <a className="link-info text-deco-none" href="#"> project case studies</a>&nbsp;and
+                    <a className="link-info text-deco-none" href="#"> resume</a>.</p>
+                <p className="text-center lead">You can also find me on the following channels</p>
                 <ul className="list-inline text-center social-list-color">
                     <li className="list-inline-item">
                         <a className="text-white twitter" href="https://twitter.com/simonpangan" target="_blank">
