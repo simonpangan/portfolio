@@ -1,6 +1,12 @@
 import './ContactForm.scss';
+import Input from "../../components/UI/Form/Input";
+import { FormContext } from '../../Context/Form';
 
 function ContactForm() {
+    const handleFormChange = (event : React.ChangeEvent<HTMLInputElement>) => {
+        alert('hello');
+    };
+
     return (
         <section className="shadow mt-4">
             <div className="p-2">
@@ -8,14 +14,8 @@ function ContactForm() {
                     <h3 className="fs-1 text-center">Get In Touch</h3>
                     <div className="row">
                         <div className="col-12 col-md-6">
-                            <div className="mb-3">
-                                <label className="form-label">Name</label>
-                                <input className="form-control" type="text"/>
-                            </div>
-                            <div className="mb-3">
-                                <label className="form-label">Email</label>
-                                <input className="form-control" type="text"/>
-                            </div>
+                            <Input name='name' type='text' label='Name' />
+                            <Input name='email' type='text' label='Email' />
                         </div>
                         <div className="col-12 col-md-6 mt-md-0 mb-3"><label
                             className="form-label">Message</label>

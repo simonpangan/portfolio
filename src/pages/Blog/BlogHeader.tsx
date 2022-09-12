@@ -1,6 +1,6 @@
 import React from 'react';
 import './BlogHeader.css';
-import PageHeader from "../../components/PageHeader";
+import PageHeader from "../../components/Layout/PageHeader";
 
 function BlogHeader() {
     return (
