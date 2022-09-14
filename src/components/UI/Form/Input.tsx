@@ -1,22 +1,39 @@
-import React, {useContext, useState} from "react";
-import {FormContext} from "../../../context/Form";
+import React from "react";
+import FormElement from "../../../interfaces/FormElementsInterface";
 
-type Props = {
-    label: string,
-    name: string,
-    type: "text",
-}
+function Input(props : any) {
+    const {
+        elementType, elementConfig, value,
+        errorMessage, valid, touched, label
+    } : FormElement = props;
 
-function Input({ label, name, type} : Props) {
-    // const [error, setError] = useState(false);
+    const { changed, shouldValidate } = props;
 
-    const formContext = useContext(FormContext);
-    const { form, handleFormChange } = formContext;
+    let inputClasses = ['form-control'];
+
+    let validationError = null;
+    if (! valid && shouldValidate && touched) {
+        inputClasses.push('is-invalid');
+        validationError = <div className="invalid-feedback">{errorMessage}</div>
+    }
+
+    let inputElement = null;
+    switch (elementType) {
+        case "input":
+            inputElement = <input className={inputClasses.join(' ')} onChange={changed} {...elementConfig} value={value} />;
+            break;
+        case "textarea":
+            inputElement = <textarea className={inputClasses.join(' ')} onChange={changed} {...elementConfig} value={value} />;
+            break;
+        default:
+            throw new Error('Element does not exist');
+    }
 
     return (
         <div className="mb-3">
             <label className="form-label">{label}</label>
-            <input className="form-control" type={type} name={name} value={(form as any)[name]} onChange={handleFormChange} />
+            {inputElement}
+            {validationError}
         </div>
     );
 }

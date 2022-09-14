@@ -2,21 +2,35 @@ import React, {useState} from 'react';
 
 export const FormContext = React.createContext({
     form: {},
-    handleFormChange: (event: React.ChangeEvent<HTMLInputElement>) :void  => {},
+    errors: {},
+    handleFormChange: (
+        event: React.ChangeEvent<any>,
+        rules : { [key: string]: boolean | Object }
+    ) :void  => {},
 });
 
 type Props = {
     children: JSX.Element[] | JSX.Element,
-    submit: (event: React.FormEvent<HTMLFormElement>, form: {}) => void,
+    submit: (form: Object) => void,
     initialValues?: {},
     className?: string
 }
 
-function Form({children, submit, initialValues, className}: Props) {
+function  Form({children, submit : inputSubmit, initialValues, className}: Props) {
     const [form, setForm] = useState(initialValues || {});
+    const [errors, setErrors] = useState({});
 
-    const handleFormChange  = (event: React.ChangeEvent<HTMLInputElement>) :void =>  {
+    const handleFormChange  = (
+        event: React.ChangeEvent<any>, rules : {}
+    ) :void =>  {
         const {name, value} = event.target;
+        //
+        // if (! checkValidity(value , rules)) {
+        //     setErrors({
+        //         ...errors,
+        //         [name]: value
+        //     });
+        // };
 
         setForm({
             ...form,
@@ -24,11 +38,39 @@ function Form({children, submit, initialValues, className}: Props) {
         });
     };
 
+    // const  checkValidity = (value, rules) => {
+    //     let isValid = true;
+    //
+    //     if (! rules) {
+    //       return isValid;
+    //     }
+    //
+    //     if (rules.required) {
+    //         isValid = value.trim() !== '' && isValid;
+    //     }
+    //
+    //     if (rules.minLength) {
+    //         isValid = value.length >= rules.minLength && isValid;
+    //     }
+    //
+    //     if (rules.maxLength) {
+    //         isValid = value.length <= rules.maxLength && isValid;
+    //     }
+    //
+    //     return isValid;
+    // }
+
+    const submit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        inputSubmit(form);
+    }
+
     return (
-        <form className={className} onSubmit={(event) => submit(event, form)}>
+        <form className={className} onSubmit={submit}>
             <FormContext.Provider value={{
                 form,
-                handleFormChange
+                handleFormChange,
+                errors
             }}>
                 {children}
             </FormContext.Provider>
