@@ -7,6 +7,7 @@ const elements = new Map<string, FormElement>([
         elementConfig: {
             type: "text",
             placeholder: "Your Name",
+            required: true
         },
         value: "",
         validation: {
@@ -24,6 +25,7 @@ const elements = new Map<string, FormElement>([
         elementConfig: {
             type: "email",
             placeholder: "Your Email",
+            required: true
         },
         value: "",
         validation: {
@@ -41,6 +43,7 @@ const elements = new Map<string, FormElement>([
         elementConfig: {
             type: "text",
             placeholder: "Your Message",
+            required: true,
             row: 5,
             style: {
                 height: "128px"

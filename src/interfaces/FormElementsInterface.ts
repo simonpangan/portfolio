@@ -5,7 +5,8 @@ export default interface FormElement{
         type: string,
         placeholder?: string,
         row?: number,
-        style? : {}
+        style? : {},
+        required? : true
     },
     value?: string,
     validation: {
