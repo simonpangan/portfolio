@@ -1,9 +1,15 @@
+import axios from "axios";
 import React, {useState} from "react";
 import FormElement from "../interfaces/FormElementsInterface";
 
 
 function useContactForm(ContactFormElements : Map<string, FormElement>) {
-    const [form, setForm] = useState(ContactFormElements);
+    const [form, setForm] = useState(new Map(ContactFormElements));
+    const [status, setStatus] = useState({
+        success: false,
+        loading: false,
+        error: false,
+    });
 
     const inputChangedHandler = (
         event: React.ChangeEvent<any>, key: any
@@ -79,7 +85,38 @@ function useContactForm(ContactFormElements : Map<string, FormElement>) {
         return true;
     }
 
-    return { form, inputChangedHandler, isValidInput };
+    const post = async (url: string, inputs: any | null) : Promise<void> =>  {
+        setStatus({
+            ...status,
+            loading: true,
+        });
+
+        await axios.post(url, {
+            ...getInputs(),
+            ...inputs
+        })
+
+        setForm(new Map(ContactFormElements));
+
+        setStatus({
+            ...status,
+            success: true,
+            loading: false,
+        });
+    }
+
+    const getInputs = () : {
+        [key: string]: number | string
+    } =>  {
+        let temp: any = {};
+        form.forEach((element, key) => {
+            temp[key] = element.value;
+        });
+
+        return temp;
+    }
+
+    return { form, inputChangedHandler, isValidInput, getInputs, post, status};
 }
 
 export default useContactForm;
