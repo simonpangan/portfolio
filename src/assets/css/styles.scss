@@ -37,14 +37,14 @@
 @import "~bootstrap/scss/helpers/visually-hidden"; //for navbar toggle
 
 
-
 // Utilities
 @import "~bootstrap/scss/utilities/api";
 
 
 // Custom styles
-
+@import './sketchy/styles/variables';
 @import './sketchy/styles/base';
+
 @import './components.css';
 @import './utiltities.css';
 
