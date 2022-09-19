@@ -8,12 +8,14 @@
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
 
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/spinners";
 @import "~bootstrap/scss/forms/labels";
 @import "~bootstrap/scss/forms/form-text";
-@import "~bootstrap/scss/forms/form-control";
 @import "~bootstrap/scss/forms/validation";
+@import "~bootstrap/scss/forms/form-control";
 
 
 //Custom Styles
-@import "../../assets/css/sketchy/styles/base";
+@import "../../assets/css/sketchy/styles/variables";
 @import "../../assets/css/sketchy/styles/forms";
