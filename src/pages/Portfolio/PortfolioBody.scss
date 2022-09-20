@@ -1,0 +1,36 @@
+//Custom Variabes
+@import "../../assets/css/sketchy/variables";
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+@import "~bootstrap/scss/badge";
+
+
+//Custom Styles
+@import "../../assets/css/sketchy/styles/variables";
+@import "../../assets/css/sketchy/styles/forms";
+
+
+.row.portfolio-row {
+  max-width: 350px;
+}
+
+@media (min-width: 576px) {
+  .row.portfolio-row {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .row.portfolio-row {
+    max-width: 1000px;
+  }
+}
+
+
+
