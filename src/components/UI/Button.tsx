@@ -1,11 +1,15 @@
 type Props = {
     text?: string,
+    className?: string,
+    type?: 'submit' | 'button',
     isLoading?: boolean,
-    children?: JSX.Element | JSX.Element[],
-    type?: 'submit' | 'button'
+    onClick?: () => any,
+    children?: JSX.Element | JSX.Element[] | string,
 }
 
-function Button({isLoading, text, type = 'submit', children} : Props) {
+function Button(
+    {text, className, type = 'submit', isLoading,  onClick, children} : Props
+) {
 
     //if children and text both exists we will choose children
     let content : any = children ? children : text;
@@ -15,7 +19,7 @@ function Button({isLoading, text, type = 'submit', children} : Props) {
     }
 
     return (
-        <button className="btn btn-primary" type={type} disabled={isLoading} >
+        <button className={`btn ${className}`} type={type} disabled={isLoading} onClick={onClick} >
             {content}
         </button>
     );

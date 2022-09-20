@@ -82,7 +82,7 @@ function ContactForm() {
                         </div>
                     </div>
                     <div className="text-md-end d-grid d-md-block">
-                       <Button isLoading={status.loading}>
+                       <Button isLoading={status.loading} className='btn-primary'>
                            <span className='me-1'>
                                Submit
                            </span>
