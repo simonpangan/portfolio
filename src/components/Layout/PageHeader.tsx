@@ -1,13 +1,18 @@
 import './PageHeader.css';
 
 type Props = {
-  children: JSX.Element[] | JSX.Element,
+  baseClass?: string,
+  children: JSX.Element[] | JSX.Element | string,
 };
 
-function PageHeader({children} : Props) {
+function PageHeader({children, baseClass} : Props) {
+
+  //replace the page header default
+  const baseCssClass =  baseClass ? baseClass :  'page-header';
+
   return (
       <div className="text-white bg-secondary p-4 mx-auto">
-        <div className="text-center text-md-start page-header px-2">
+        <div className={`${baseCssClass} text-center text-md-start  px-2`}>
           {children}
         </div>
       </div>
