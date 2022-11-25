@@ -1,0 +1,9 @@
+.alert {
+  border-radius: $border-radius-sketchy;
+
+  .btn-close {
+    &::before {
+      color: inherit;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+a.feature-projects-links {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+a.feature-projects-links:hover {
+    text-decoration: underline;
+}

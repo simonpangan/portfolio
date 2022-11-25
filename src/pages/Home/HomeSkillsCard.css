@@ -1,0 +1,9 @@
+.skills-icon-holder {
+    background: var(--bs-primary);
+    width: 80px;
+    height: 80px;
+    padding-top: 1.25rem;
+    top: -40px;
+    left: 40%;
+    margin-left: -40px;
+}

@@ -1,0 +1,26 @@
+.navbar {
+  button[aria-expanded="true"] > span.navbar-toggler-close {
+    display: inline;
+    color: #fff;
+    opacity: 1;
+  }
+
+  button[aria-expanded="true"] > span.navbar-toggler-open {
+    display: none;
+  }
+
+  button[aria-expanded="false"] > span.navbar-toggler-close {
+    display: none;
+  }
+}
+
+.navbar-expand-md .navbar-collapse {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-collapse {
+    display: none !important;
+  }
+}

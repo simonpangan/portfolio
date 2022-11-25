@@ -1,0 +1,17 @@
+.row.home-row {
+  max-width: 350px;
+}
+
+@media (min-width: 576px) {
+  .row.home-row {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .row.home-row {
+    max-width: 1000px;
+  }
+}
+
+

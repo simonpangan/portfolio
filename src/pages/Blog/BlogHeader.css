@@ -1,0 +1,16 @@
+.blog-img {
+  cursor: pointer;
+}
+
+.blog-social-icon {
+  transition: all 0.4s ease-in-out;
+}
+
+.blog-social-icon:hover {
+  color: var(--bs-primary);
+}
+
+.blog-title:hover {
+  opacity: 0.75;
+}
+

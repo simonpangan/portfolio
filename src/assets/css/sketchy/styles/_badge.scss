@@ -1,0 +1,12 @@
+.badge {
+	border-radius: $border-radius-sm-sketchy;
+  
+	&-pill {
+	  border-radius: 7rem 8rem 8rem 8rem / 4rem 5rem 6rem 6rem;
+	}
+  
+	&.bg-light {
+	  color: $dark;
+	}
+  }
+  

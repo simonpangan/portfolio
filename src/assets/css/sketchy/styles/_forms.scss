@@ -1,0 +1,126 @@
+// Forms
+
+input,
+.form-control,
+.input-group-text {
+  border-radius: $border-radius-sketchy;
+}
+
+textarea,
+textarea.form-control,
+select,
+select.form-control {
+  border-radius: $border-radius-lg-sketchy !important;
+}
+
+[type="checkbox"] {
+  position: relative;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  border: none;
+  appearance: none;
+
+  &::before {
+    position: absolute;
+    top: -.1em;
+    left: 0;
+    display: inline-block;
+    width: 15px;
+    height: 16px;
+    content: "";
+    border: 2px solid $gray-800;
+    border-radius: 2px 8px 2px 4px / 5px 3px 5px 3px;
+  }
+
+  &:checked::after {
+    position: absolute;
+    top: 0;
+    left: .1em;
+    font-size: 1.5rem;
+    line-height: .5;
+    color: $gray-800;
+    content: "x";
+  }
+
+  &:disabled {
+    &::before {
+      border: 2px solid $gray-500;
+    }
+  }
+}
+
+[type="radio"] {
+  position: relative;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  border: none;
+  appearance: none;
+
+  &::before {
+    position: absolute;
+    top: -.1em;
+    left: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    content: "";
+    border: 2px solid $gray-800;
+    border-radius: 50% 45% 40% 50% / 40% 50% 50% 45%;
+  }
+
+  &:checked::before {
+    background-color: $gray-800;
+  }
+
+  &:disabled {
+    &::before {
+      border: 2px solid $gray-500;
+    }
+  }
+}
+
+.form-check-input {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.form-switch {
+  padding-left: 0;
+
+  .form-check-input {
+    position: relative;
+    margin-left: 0;
+
+    &::before {
+      width: 32px;
+      border-radius: 30% 35% 30% 30% / 30% 50% 30% 45%;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      content: "";
+      background-color: $white;
+      border: 2px solid #333;
+      border-radius: 50% 45% 40% 50% / 40% 50% 50% 45%;
+      transition: left .15s ease-in-out;
+    }
+
+    &:checked::after {
+      top: 0;
+      left: 18px;
+      background-color: $gray-800;
+    }
+  }
+
+  .form-check-label {
+    margin-left: .5em;
+  }
+}
