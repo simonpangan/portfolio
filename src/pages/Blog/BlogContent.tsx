@@ -7,10 +7,16 @@ import {useParams} from "react-router-dom";
 
 import parse from "html-react-parser";
 
-
 function BlogContent() {
     const { title } = useParams();
-    const [articleRequest, setArticleRequest] = useState<Article>();
+    const [articleRequest, setArticleRequest] = useState<Article>({
+        id: 0,
+        blog: "",
+        date: "",
+        img: "",
+        subtitle: "",
+        title: ""
+    });
 
     useEffect(() => {
         const articleRequest = articles.find(function (article: Article, index) {
@@ -20,12 +26,13 @@ function BlogContent() {
             return articleTitleSerialize === article.title.toLowerCase();
         });
 
+        // @ts-ignore
         setArticleRequest(articleRequest);
     });
 
     return (
         <article className="mx-auto blog-article">
-            <Card />
+            <Card children={articleRequest as Article}/>
             {articleRequest?.blog && parse(articleRequest?.blog as string)}
         </article>
     );

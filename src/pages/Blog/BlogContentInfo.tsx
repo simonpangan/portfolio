@@ -7,53 +7,19 @@ import ui2 from '../../assets/img/ui-design-book-pages-adham-dannaway-2000x993.j
 function BlogContentInfo() {
     return (
        <>
-           <p className="fs-5 fw-light mt-4">Contrary to popular belief, user interface design isn’t just about
-               creating pretty pixels. Of course, making an interface look great is important, but there’s much more to
-               it than that. Learning the how and why behind interface design will ensure that every design detail has
-               a logical purpose behind it.</p>
-           <p className="fs-5 fw-light mt-4">Contrary to popular belief, user interface design isn’t just about
-               creating pretty pixels. Of course, making an interface look great is important, but there’s much more to
-               it than that. Learning the how and why behind interface design will ensure that every design detail has
-               a logical purpose behind it.</p>
-           <p className="fs-5 fw-light mt-4">Contrary to popular belief, user interface design isn’t just about
-               creating pretty pixels. Of course, making an interface look great is important, but there’s much more to
-               it than that. Learning the how and why behind interface design will ensure that every design detail has
-               a logical purpose behind it.</p>
-           <p className="fs-5 fw-light mt-4">
-               I’m also writing my own <a href="#">UI design book&nbsp;</a>
-               &nbsp;to
-               provide a faster and more practical way to learn UI design. Solve almost any UI design problem with a
-               handful of powerful guidelines. You don’t need to be creative or artistic, just apply the guidelines
-               systematically based on objective logic. Check it out.</p>
-           <img className="img-fluid" src={ui1} />
+           <p className="fs-5 fw-light mt-4">I cannot believe  that I am writing this blog as my graduation nears. Never did I think time would fly by so fast. I still remember my very first day in benilde, the INTERAKTIV 2018, where I got the opportunity to learn more about my blockmates, be oriented about the history of the institution and what I can expect in college. As a freshman, I always feel that senior year was a distant thought. I remember being intimidated by my professors and the higher batch of thesis. That many students are unable to graduate on time because they are unable to pass and have been stuck in Benilde for years. When I finally get to my senior year, I'm so nervous because I know this is the time when you're going to be heavily tested by taking ISPROJ-1 and ISPROJ-2. It's terrifying just thinking about it.  Now, there are only a few months until I graduate and we all put on our caps and gowns. A few months before our lives truly begin. This is for sure going to be one of the most significant event of my life. It will give me a sense of completion, it going to proved that all of my hard work pays off, and it’ll give me a greater appreciation for my opportunities.</p>
+           <p className="fs-5 fw-light mt-4">Right now, I have a mixed of thousand of emotions and yet I have no words to describe it.
+               There’s a lot of things I’ve learned and realized and I’m gonna try my best to tell all of them here.
+           </p>
+
            <hr/>
-           <h2 className="mt-4">My top 3 UI design books</h2>
-           <p className="fs-5 fw-light mt-2">I’d suggest reading these first as they cover the essentials:
-               practical UI design tools and fundamentals, the psychology behind an interface, and the business
-               side of persuasion and selling.</p>
            <div>
-               <img className="img-fluid" src={ui2} />
-               <h3 className="fs-4 fw-semibold mt-3">1. UI is Communication</h3>
-               <p className="text-muted">By Everett N McKay</p>
-               <p className="fs-5 fw-normal">This book is not about detailed theories; instead, it focuses on
-                   providing you with the practical tools you need to solve real-life UI design problems. UI
-                   design
-                   is often seen in a very subjective way, as pretty pixels on a screen. The author’s premise
-                   is
-                   that it’s not about aesthetics – rather, UI design is actually an objective way to
-                   communicate
-                   to users. I like how an interface is compared to a conversation. What should it say to the
-                   user,
-                   how should it say it and when? Simply writing down the conversation between the interface
-                   and
-                   the user can lay a strong foundation for the UI design. There are plenty of real examples
-                   and
-                   design makeovers to help you see the concepts in practice, too, which is helpful.</p>
-               <p className="fs-5 fw-bolder text-primary">
-                   A great read for designers looking for objective, practical UI design tools to solve real-life
-                   problems.
-               </p>
-               <a className="btn btn-outline-primary d-block d-md-inline" href="#">Link </a>
+               <h3 className="fs-4 fw-semibold mt-3">Connect with Individuals from Different Backgrounds</h3>
+               <p className="fs-5 fw-normal">This is probably one of the biggest adjustment I made once I enter benilde. There are so many students from different countries. This is the reason why I learn how to speak and communicate  in english confidently and fluently. I also learn to break out of my comfort zone and experiencing new cultures, cuisines, and traditions. From eating chinese foods, korean foods, european foods you name it. I experience all of this myself whenever I have a foreigner friend who is going to treat me for lunch or dinner.</p>
+           </div>
+           <div>
+               <h3 className="fs-4 fw-semibold mt-3">Self - Discipline</h3>
+               <p className="fs-5 fw-normal">This is probably one of the biggest adjustment I made once I enter benilde. There are so many students from different countries. This is the reason why I learn how to speak and communicate  in english confidently and fluently. I also learn to break out of my comfort zone and experiencing new cultures, cuisines, and traditions. From eating chinese foods, korean foods, european foods you name it. I experience all of this myself whenever I have a foreigner friend who is going to treat me for lunch or dinner.</p>
            </div>
            <hr/>
            <p className="fs-5 fw-lighter">I hope you’ve found this round-up of UI design books helpful in your

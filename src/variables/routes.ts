@@ -14,24 +14,24 @@ const routes: Array<Route> = [
 		url: '/',
 		Component: Home,
 	},
-	{
-		id: 2,
-		name: 'Portfolio',
-		url: '/portfolio',
-		Component: Portfolio,
-	},
+	// {
+	// 	id: 2,
+	// 	name: 'Portfolio',
+	// 	url: '/portfolio',
+	// 	Component: Portfolio,
+	// },
 	{
 		id: 3,
 		name: 'Blogs',
 		url: '/blogs',
 		Component: Blog,
 	},
-	{
-		id: 4,
-		name: 'Blog Content',
-		url: '/blogs/:title',
-		Component: BlogContent,
-	},
+	// {
+	// 	id: 4,
+	// 	name: 'Blog Content',
+	// 	url: '/blogs/:title',
+	// 	Component: BlogContent,
+	// },
 	{
 		id: 5,
 		name: 'Contact',

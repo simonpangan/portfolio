@@ -5,19 +5,22 @@ import me from '@assets/img/me.jpg'
 import Article from "./Article";
 
 type Props = {
-    children: Article,
+    children: Article
 };
 
 function BlogArticleHeader({children}: Props) {
 
     const { title, subtitle, img, date } = children;
 
+    const articleTitleSerialize =
+        title?.replaceAll(' ', '-').toLowerCase();
+
     return (
         <article className="mx-auto blog-article mt-3">
             <div className="card card-default">
                 <img className="w-100 d-block blog-img" src={img} alt={title} />
                 <div className="card-body">
-                    <a className="text-deco-none display-5 blog-title" href="#">
+                    <a className="text-deco-none display-5 blog-title" href={`/blogs/${articleTitleSerialize}`}>
                         {title}
                     </a>
                     <p className="fs-4 text-muted card-text mt-md-2">

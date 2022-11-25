@@ -8,6 +8,8 @@ import Footer from "./fragments/Footer";
 import {Routes, Route} from "react-router-dom";
 
 import routes from "./variables/routes";
+import BlogContent from "@/pages/Blog/BlogContent";
+import BlogContentInfo from "@/pages/Blog/BlogContentInfo";
 
 function App() {
     const routeComponents = routes.map(
@@ -23,6 +25,8 @@ function App() {
             <div className="container-fluid px-0">
                 <Routes>
                     {routeComponents}
+                    <Route path='/blogs/:title' element={<BlogContent />} />
+                        <Route path='/contentInfo' element={<BlogContentInfo />} />
                 </Routes>
             </div>
 
