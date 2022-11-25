@@ -33,11 +33,9 @@ function HomeSkillsOverview() {
         <section className="p-2 mt-3">
             <h3 className="text-center">Skills Overview</h3>
             <p className="text-center mx-auto" style={{maxWidth: '780px'}}>
-                &nbsp;I have more than 8 years'
-                experience
-                building rich web applications for clients all over the world. Below is a quick overview of my main
-                technical skill sets and tools I use. Want to find out more about my experience? Check out my online
-                resume.
+                &nbsp;I have more than 3 years'
+                experience building rich web applications for clients. Below is a quick overview of my main
+                technical skill sets and tools I use.
             </p>
             <div>
                 <div className="row gy-3 gy-md-0 mx-auto mt-2 home-row">

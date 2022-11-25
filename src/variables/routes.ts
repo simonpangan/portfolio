@@ -3,8 +3,9 @@ import Route from '../interfaces/RouteInterface';
 import Home from "../pages/Home/Home";
 import Blog from "../pages/Blog/Blog";
 import Contact from "../pages/Contact/Contact";
-import BlogContent from "../pages/Blog/BlogContent";
 import Portfolio from "../pages/Portfolio/Portfolio";
+import Awards from "@/pages/Awards/Awards";
+import BlogContentInfo from "@/pages/Blog/BlogContentInfo";
 
 
 const routes: Array<Route> = [
@@ -32,6 +33,12 @@ const routes: Array<Route> = [
 	// 	url: '/blogs/:title',
 	// 	Component: BlogContent,
 	// },
+	{
+		id: 6,
+		name: 'Awards',
+		url: '/awards',
+		Component: Awards,
+	},
 	{
 		id: 5,
 		name: 'Contact',

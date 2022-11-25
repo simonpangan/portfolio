@@ -85,6 +85,18 @@ export  const others : Array<Stack> = [
         id: 2,
         name: 'Self-learning'
     },
+    {
+        id: 3,
+        name: 'Leader'
+    },
+    {
+        id: 4,
+        name: 'Teamwork'
+    },
+    {
+        id: 5,
+        name: 'Hard-Working'
+    },
 ];
 
 export const techStack : {[key: string]: Array<Stack>} = {

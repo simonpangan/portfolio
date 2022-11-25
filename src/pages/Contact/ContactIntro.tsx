@@ -11,9 +11,7 @@ function ContactIntro() {
                 <p className="contact-intro-message mx-auto">
                     I'm currently taking on freelance work.
                     If you are interested in hiring me for your project please use the form below to get in touch.
-                    Want to know how I work and what I can offer? Check out my
-                    <a className="link-info text-deco-none" href="#"> project case studies</a>&nbsp;and
-                    <a className="link-info text-deco-none" href="#"> resume</a>.</p>
+                </p>
                 <p className="text-center lead">You can also find me on the following channels</p>
                 <ul className="list-inline text-center social-list-color">
                     <li className="list-inline-item">

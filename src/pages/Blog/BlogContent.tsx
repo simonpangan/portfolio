@@ -6,6 +6,7 @@ import Article, {articles} from "@/pages/Blog/Article";
 import {useParams} from "react-router-dom";
 
 import parse from "html-react-parser";
+import ArticleLayout from "@/components/Layout/ArticleLayout";
 
 function BlogContent() {
     const { title } = useParams();
@@ -31,10 +32,10 @@ function BlogContent() {
     });
 
     return (
-        <article className="mx-auto blog-article">
+        <ArticleLayout>
             <Card children={articleRequest as Article}/>
-            {articleRequest?.blog && parse(articleRequest?.blog as string)}
-        </article>
+            {articleRequest.blog && parse(articleRequest.blog as string)}
+        </ArticleLayout>
     );
 }
 

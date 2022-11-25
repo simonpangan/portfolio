@@ -36,11 +36,7 @@ function HomeHeader() {
                             </h6>
                             <h4 className="display-4 card-title">Simon Pangan</h4>
                             <p className="card-text">
-                                I'm a full-stack developer specialised in frontend and backend
-                                development for complex scalable web apps. I write about web
-                                development on my blog and regularly speak at various web
-                                conferences and meetups. Want to know how I may help your project?
-                                Check out my project case studies and resume.
+                                I'm a full stack developer based in the Philippines
                             </p>
                             <a href={`${import.meta.env.VITE_URL}/resume.pdf`} className="btn btn-outline-info me-2" download>
                                 Resume

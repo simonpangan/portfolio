@@ -1,6 +1,13 @@
 import NSTP from '@/pages/Blog/Articles/NSTP.jpg';
 import college from '@/pages/Blog/Articles/college.jpg';
 
+import chart from '@/pages/Blog/Articles/Internship-Chart.png'
+import transfer from '@/pages/Blog/Articles/Internship-service.png'
+import analytics from '@/pages/Blog/Articles/Internship-analytics.png'
+import chartPackage from '@/pages/Blog/Articles/Internship-package.png'
+import email from '@/pages/Blog/Articles/Internship-Email.png'
+import cron from '@/pages/Blog/Articles/Internship-cron.png'
+
 export default interface Article {
     id: number,
     title: string,
@@ -51,14 +58,91 @@ const experientialLearning =
     + '<p className="fs-5 fw-light mt-4">For my recommendation to the upcoming NSTP class, I would recommend that each student must be prepared in all aspects of their service-learning. This includes a clear understanding of task and role, the skills and information required by the task, an awareness of safety precautions and knowledge about and sensitivity to the people with whom they will be working. Also, Students must know how to adjust their time upon travelling to the location as this would be one of the common factors that would cause delay on the given schedule for the activity.</p>'
 ;
 
+const internshipLearning =
+    '           <p className="fs-5 fw-light mt-4">\n' +
+    '               My role of as an intern involves participation in all stages of the Software Development Life Cycle.\n' +
+    '               i reports to  respective Solutions Managers of the projects I am deployed to,\n' +
+    '               which may be short-term or long-term engagements.\n' +
+    '               The projects may involve working closely with clients,\n' +
+    '               or at times working off-site at the client’s location depending on the needs of the project\n' +
+    '               and my own willingness.\n' +
+    '               Clients can be customers or representatives of other groups within the company.\n' +
+    '               Projects are usually team-based,\n' +
+    '               where I am going to work alongside other Software Developer to deliver solutions to clients.\n' +
+    '           </p>\n' +
+    '           <hr/>\n' +
+    '           <div>\n' +
+    '               <h3 className="fs-4 fw-semibold mt-3">\n' +
+    '                   1. Transfer Dashboard module from backend service to report service\n' +
+    '               </h3>\n' +
+    '               <img className="img-fluid" src='+transfer+' />\n' +
+    '               <p className="fs-5 fw-normal">\n' +
+    '                   The red core solutions which is the organization I am working implements the micro-service pattern. Which means the application is divided into multiple services rather than one single entity. My very first task in the organization is to move source code from one service to the another which if you might guest from backend service to report service.\n' +
+    '               </p>\n' +
+    '           </div>\n' +
+    '           <div>\n' +
+    '               <h3 className="fs-4 fw-semibold mt-3">\n' +
+    '                   2. Find a Vue.JS package for rendering charts\n' +
+    '               </h3>\n' +
+    '               <img className="img-fluid" src='+chartPackage+' />\n' +
+    '               <p className="fs-5 fw-normal mt-3">\n' +
+    '                   I was task to find any 3rd party vue.js chart package such that our life is going to be easier rather than creating it from scratch.\n' +
+    '                   The first thing I did to accomplish this is so search “Top Vue.Js Chart Package” in google.\n' +
+    '                   Then, I browse each websites listed by google and read each articles I see in order to use the most stable package\n' +
+    '                   as much as possible and of course the one that is easier to use.\n' +
+    '                   I ended up using vue-chartjs which is a wrapper for the plain chart js using plain javascript\n' +
+    '               </p>\n' +
+    '           </div>\n' +
+    '           <div>\n' +
+    '               <h3 className="fs-4 fw-semibold mt-3">3. Created vue charts components</h3>\n' +
+    '               <img className="img-fluid" src='+chart+' />\n' +
+    '               <p className="fs-5 fw-normal mt-3">\n' +
+    '                   I already now have a 3rd party vue js package to use. The task to me now is to use the library to create reusable vue js  charts components that is going to be use by the organization.\n' +
+    '               </p>\n' +
+    '           </div>\n' +
+    '           <div>\n' +
+    '               <h3 className="fs-4 fw-semibold mt-3">4. Created Analytics and Summary Query</h3>\n' +
+    '               <img className="img-fluid" src='+analytics+' />\n' +
+    '               <p className="fs-5 fw-normal mt-3">\n' +
+    '                   In relation to the previous mention task, how can we display charts without any data? So the goal of this task is to generate SQL queries using the LARAVEL ELOQUENT to get the data needed for each chart and return it in the API\n' +
+    '               </p>\n' +
+    '           </div>\n' +
+    '           <div>\n' +
+    '               <h3 className="fs-4 fw-semibold mt-3">5. Issue resolution cron service</h3>\n' +
+    '               <img className="img-fluid" src='+cron+' />\n' +
+    '               <p className="fs-5 fw-normal mt-3">\n' +
+    '                   This task focuses on improving the existing cron service code base of red core.\n' +
+    '                   I was task to double check and correct the code created by the old developers\n' +
+    '               </p>\n' +
+    '           </div>\n' +
+    '           <div>\n' +
+    '               <h3 className="fs-4 fw-semibold mt-3">6. Issue Resolution email enhancement</h3>\n' +
+    '               <img className="img-fluid" src='+email+' />\n' +
+    '               <p className="fs-5 fw-normal mt-3">\n' +
+    '                   My final task in red core is just improving the email being sent to respective recipients.  I was task to add an additional code to the existing code base to include the notifier(the one who created the issue in the system) to the receipents of the email.\n' +
+    '               </p>\n' +
+    '           </div>\n' +
+    '           <hr/>\n' +
+    '           <p className="fs-5 fw-lighter">Overall, I learn a lot from my internship with red core. In fact, one of the biggest take away is what microservice is  all about. Before my internship, I am very curious what micro-service was since I hear it every time and such pattern was use by big companies like facebook. With my internship in red core I was able to experience Micro-service in action. I learn how they implement the pattern. What the pros and cons of it and how to implement it on my own.\n' +
+    '           </p>\n'
+;
+
 export const articles: Array<Article> = [
     {
         id: 1,
-        title: "Reflections on College Life",
+        title: "Reflection on College Life",
         subtitle: "I discussed here the lessons I learned from college life and my plans moving forward",
         img: college,
         date: 'November 24, 2022',
         blog: collegeReflection
+    },
+    {
+        id: 3,
+        title: "Internship Learning",
+        subtitle: "I list down here the tasks and output of my virtual internship.",
+        img: 'https://www.studyinternational.com/wp-content/uploads/2020/12/virtual-internships.jpg',
+        date: 'November 24, 2022',
+        blog: internshipLearning
     },
     {
         id: 2,

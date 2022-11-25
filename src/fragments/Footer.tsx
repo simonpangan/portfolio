@@ -1,6 +1,6 @@
 export default () => {
     return (
-        <footer className="bg-primary bg-opacity-10 pb-2 pt-3 text-center mt-2">
+        <footer className="bg-primary bg-opacity-10 pb-2 pt-3 text-center mt-3">
             <p>
                 Made with
                <span className='mx-1'>

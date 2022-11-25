@@ -1,5 +1,4 @@
 import React from 'react';
-import './BlogArticleHeader.css';
 import me from '@assets/img/me.jpg'
 
 import Article from "./Article";
@@ -16,7 +15,7 @@ function BlogArticleHeader({children}: Props) {
         title?.replaceAll(' ', '-').toLowerCase();
 
     return (
-        <article className="mx-auto blog-article mt-3">
+        <article className="mx-auto mt-3">
             <div className="card card-default">
                 <img className="w-100 d-block blog-img" src={img} alt={title} />
                 <div className="card-body">
