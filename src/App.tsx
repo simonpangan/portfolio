@@ -26,7 +26,7 @@ function App() {
                 <Routes>
                     {routeComponents}
                     <Route path='/blogs/:title' element={<BlogContent />} />
-                        <Route path='/contentInfo' element={<BlogContentInfo />} />
+                    <Route path='/contentInfo' element={<BlogContentInfo />} />
                 </Routes>
             </div>
 
